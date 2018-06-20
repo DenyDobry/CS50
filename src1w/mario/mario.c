@@ -4,26 +4,26 @@
 int GetCorrectInt(void);
 
 int main(void) {	
-	int height; 
-	int countString;
-	int backCountString;
-	int spaces;
-	int sharps;
+	int height; // Variable of the given height
+	int countString; //line number counter
+	int backCountString; //reverse row counter
+	int spaces; //variable for drawing spaces
+	int sharps; //variable for drawing grids
 
-	height = GetCorrectInt();
-	backCountString = height;
-	for (countString = 1; countString <= height; countString++)
+	height = GetCorrectInt(); //check the correctness of the entered data
+	backCountString = height; //give the reciprocal counter the highest point
+	for (countString = 1; countString <= height; countString++) //run a loop on each line
 	{
-		for (spaces = 1; spaces < backCountString; spaces++)
+		for (spaces = 1; spaces < backCountString; spaces++) //run a loop of drawing spaces
 		{
 			printf(" ");
 		}
-		for (sharps = 0; sharps <= countString; sharps++)
+		for (sharps = 0; sharps <= countString; sharps++) //run a loop of drawing grids
 		{
 			printf("#");
 		}
-		printf("\n");
-		backCountString--;
+		printf("\n"); //move the line
+		backCountString--; //subtracts a drawn line
 	}
 
 }
